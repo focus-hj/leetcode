@@ -16,10 +16,20 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b7c7bd5-784c-46c3-bf29-f444175e35a7" name="Default Changelist" comment="feat:订正56题，完成57题" />
+    <list default="true" id="5b7c7bd5-784c-46c3-bf29-f444175e35a7" name="Default Changelist" comment="fix:优化文件结构">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_sort/01_sort.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,13 +59,12 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/01_sort" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -136,6 +145,7 @@
       <updated>1618839381991</updated>
       <workItem from="1618839383655" duration="9973000" />
       <workItem from="1619009228061" duration="8773000" />
+      <workItem from="1619018028448" duration="562000" />
     </task>
     <task id="LOCAL-00001" summary="feat:创建第56题">
       <created>1618849684112</created>
@@ -151,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619017876195</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix:优化文件结构">
+      <created>1619018210544</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619018210544</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +179,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -172,17 +201,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat:创建第56题" />
     <MESSAGE value="feat:订正56题，完成57题" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:订正56题，完成57题" />
+    <MESSAGE value="fix:优化文件结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix:优化文件结构" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1618839555039">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1618839555039" />
-    <state x="421" y="30" key="FileChooserDialogImpl" timestamp="1619013331819">
+    <state x="421" y="30" key="FileChooserDialogImpl" timestamp="1619018548497">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="30" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1619013331819" />
+    <state x="421" y="30" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1619018548497" />
     <state width="1237" height="120" key="GridCell.Tab.0.bottom" timestamp="1619018008210">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -215,14 +245,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="194" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1618849807191" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1619013333484">
+    <state x="61" y="18" width="1150" height="651" key="MergeDialog" timestamp="1619018364740">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1619013333484" />
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1619017882733">
+    <state x="61" y="18" width="1150" height="651" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1619018364740" />
+    <state x="527" y="207" width="417" height="266" key="MultipleFileMergeDialog" timestamp="1619018364744">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1619017882733" />
+    <state x="527" y="207" width="417" height="266" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1619018364744" />
+    <state x="436" y="49" key="NewModule_or_Project.wizard" timestamp="1619018488911">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="436" y="49" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1619018488911" />
+    <state x="242" y="0" key="SettingsEditor" timestamp="1619018589374">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="242" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1619018589374" />
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1619018212761">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1619018212761" />
+    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619018222743">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1619018222743" />
     <state x="28" y="1" key="new project wizard" timestamp="1618839501248">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
