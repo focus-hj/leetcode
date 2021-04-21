@@ -23,7 +23,7 @@ import java.util.List;
 链接：https://leetcode-cn.com/problems/merge-intervals
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Solution {
+public class SolutionAnswer {
 
     public int[][] merge(int[][] intervals) {
         if (intervals.length == 0) {
@@ -31,26 +31,25 @@ public class Solution {
         }
         Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
         List<int[]> merged = new ArrayList<>();
-        int start = intervals[0][0];
-        int end = intervals[0][1];
-        for(int i = 1; i <intervals.length; i++){
-            if (end < intervals[i][0]) {
-                merged.add(new int[]{start, end});
-                start = intervals[i][0];
-                end = intervals[i][1];
-            } else if (end < intervals[i][1]) {
-                end = intervals[i][1];
+        for (int[] interval : intervals) {
+            int left = interval[0];
+            int right = interval[1];
+            if (merged.size() == 0 || merged.get(merged.size() - 1)[1] < left) {
+                merged.add(interval);
+            } else if (merged.get(merged.size() - 1)[1] >= left) {
+                merged.get(merged.size() - 1)[1] = Math.max(merged.get(merged.size() - 1)[1], right);
             }
         }
-        merged.add(new int[]{start, end});
         return merged.toArray(new int[merged.size()][]);
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
-//        int[][] intervals = {{1, 4}, {4, 7}, {6, 11}, {7, 10}};
-        int[][] intervals = {{1, 4}, {4, 5}};
+        SolutionAnswer s = new SolutionAnswer();
+        int[][] intervals = {{1, 4}, {4, 5}, {6, 11}, {7, 10}};
+//        int[][] intervals = {{1, 4}, {4, 5}};
         int[][] merged = s.merge(intervals);
-        System.out.println(Arrays.deepToString(merged));
+        for (int[] ints : merged) {
+            System.out.println(Arrays.toString(ints));
+        }
     }
 }
