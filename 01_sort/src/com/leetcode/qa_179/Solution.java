@@ -29,26 +29,34 @@ import java.util.*;
 
 public class Solution {
     public String largestNumber(int[] nums) {
-        int max = Arrays.stream(nums).max().getAsInt();
-        int maxLen = String.valueOf(max).toCharArray().length;
-        Map<Integer, Integer> map = new TreeMap<>();
-        for (int num : nums) {
-            int key = num;
-            while (String.valueOf(key).toCharArray().length < maxLen) {
-                key = (key * 10) + (key % 10);
+        Integer[] numsArr = new Integer[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            numsArr[i] = nums[i];
+        }
+        Arrays.sort(numsArr, (x, y) -> {
+            long sx = 10;
+            long sy = 10;
+            while (sx <= x) {
+                sx *= 10;
             }
-            map.put(key, num);
+            while (sy <= y) {
+                sy *= 10;
+            }
+            return (int) ((y * sx + x) - (x * sy + y));
+        });
+        if (numsArr[0] == 0) {
+            return "0";
         }
         StringBuilder res = new StringBuilder();
-        for (Integer k : map.keySet()) {
-            res.insert(0, map.get(k));
+        for (Integer num : numsArr) {
+            res.append(num);
         }
         return res.toString();
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = {34323, 3432};
+        int[] nums = {10, 2};
         String res = solution.largestNumber(nums);
         System.out.println(res);
     }
